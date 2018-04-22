@@ -2,8 +2,16 @@
 declare(strict_types=1);
 error_reporting(-1);
 
+function ret_maybe_null() : ?string {
+	if (FALSE) {
+		return "normal string";
+	} else {
+		return null;
+	}
+}
+
 function get_sample_str() : string {
-	return null;
+	return ret_maybe_null();
 }
 
 function main() {
